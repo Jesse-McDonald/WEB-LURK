@@ -65,11 +65,11 @@ io.on('connection', function(socket) { //Everything related to a single client u
     var rawPlayer = true;
     var started = false;
 
-    console.log('user connected to ' + socket.handshake.query.ip + ':' + socket.handshake.query.port); //only fires on connection, so create socket here, probiably also send a uuid (if I end up using a uuid)
+    //console.log('user connected to ' + socket.handshake.query.ip + ':' + socket.handshake.query.port); //only fires on connection, so create socket here, probiably also send a uuid (if I end up using a uuid)
 	
     var client = new net.Socket();
     client.connect(socket.handshake.query.port, socket.handshake.query.ip, function() { //establish connection with lurk server
-        console.log('Connected');
+        //console.log('Connected');
         //client.write('Hello, server! Love, Client.');
     });
 
@@ -98,7 +98,7 @@ io.on('connection', function(socket) { //Everything related to a single client u
         }
 
         if (characterPkt.monster) { //sepperate processing for monsters
-			console.log(characterPkt)
+			//console.log(characterPkt)
             var found = false;
             for (var i = 0; i < monsters.length; i++) {
                 if (characterPkt.name == monsters[i].name) { //found it
