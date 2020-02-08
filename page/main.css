@@ -1,0 +1,242 @@
+html{
+	background:#eee;
+	height:calc(100% - 2em);
+	border: solid;
+	border-color: #aaa;
+	border-width:1em;
+}
+body{
+	height:100%;
+}
+
+#game-desc, #waiting, #connection, #join form{
+	border:solid;
+	border-width: 1px;
+	padding:6pt;
+	margin:6pt;
+	background:#fafafa;
+}
+
+#join > form {
+	padding:1em;
+	position:fixed;
+	bottom:.5em;
+	left: .5em;
+	right: .5em;
+	
+}
+.left {
+	float:left;
+}
+.right{
+	float:right;
+}
+.game-desc .right{
+	width:150pt;
+}
+#join > form .right{
+	text-align:right;
+	
+}
+#join > form [name="stat_max"]{
+	text-align:left;
+	
+}
+input[type="number"]{
+  width:4em;
+}
+input[type="text"]{
+	width:31em;
+}
+textarea{
+	width:32em;
+	min-height:6.5em;
+	
+}
+#messages li:nth-child(odd) {
+	background: #eee;
+}
+#game{
+	height:100%;
+	
+}
+
+
+#chat{
+	position:relative;
+	float:left;
+  height:100%;
+	vertical-align:sub;
+	width:21em;
+	border:solid;
+	border-width:1pt;
+	margin:0pt;
+	padding:0pt;
+}
+#chat form{
+	position:absolute;
+	bottom:0pt;
+	background:#fff;
+	padding:.5em;
+	border-top:solid;
+	border-width:1px;
+	max-height:4em;
+}
+#chat input[type="text"]{
+	width:50%;
+ box-shadow:none;
+}
+#chat select{
+	width:3.5em;
+}
+#chat button{
+  width:4.5em;	
+}
+#messages{
+	margin:0pt;
+	background:#fff;
+	overflow-y:scroll;
+	width:100%;
+	padding:0pt;
+	padding-bottom:1pt;
+	height:calc(100% - 3em);
+}
+#messages li{
+	list-style-type: none;
+	padding:5pt;
+	margin:0pt;
+}
+#messages li.error{
+	background:red;
+}
+#game{
+	position: relative;
+}
+#room-title{
+	width:calc(100% - calc( 22em - 4pt ) );
+	background-color:white;
+	 float:left;
+	padding:3pt;
+} 
+#room-description{
+		width:calc(100% - calc( 22em - 4pt ) );
+	  height:calc(100% - 15.2em);
+	  background-color:white;
+	  padding:3pt;
+	  float:left;
+position:relative;
+	overflow-y:scroll;
+}
+#room-description button[name=start]{
+	display:block;
+  margin: auto;
+position:absolute;
+top:calc( 50% - 2.5em);
+left:calc( 50% - 5em);
+
+}
+#character{
+	padding:3pt;
+	float:left;
+  width:15em;
+	border:solid;
+	border-width: 1pt;
+}
+
+#character div[name=description]{
+	background:#fff;
+	float:left;
+	overflow-y:scroll;
+	padding:3pt;
+	margin:2pt;
+	border:solid;
+	border-width:1pt;
+	width:50%;
+	height:6em;
+	
+}
+
+.attr div, .stat div, .attr input{
+	display: inline;
+ float:right;
+	
+}
+#players, #loot, #monsters{
+	width:10em;
+}
+.mid{
+	float:left;
+	text-align:right;
+	
+}
+#inspect{
+	float:right;
+	
+}
+#inspect{
+	padding:3pt;
+	float:right;
+  width:16em;
+	border:solid;
+	border-width: 1pt;
+	margin-left:1pt;
+	margin-right:2pt;
+	height:12em;
+	margin-top:1pt;
+}
+#inspect div[name=description]{
+	background:#fff;
+	float:right;
+	overflow-y:scroll;
+	padding:3pt;
+	margin:1pt;
+	border:solid;
+	border-width:1pt;
+	width:60%;
+	height:6em;
+	
+}
+#inspect div[name=description]{
+	
+}
+#connections{
+	background:#fff;
+	width:100%;
+  height:4em;
+ border:solid;
+	border-width:1px;
+	margin:1pt;
+	overflow-y:scroll;
+}
+#controles{
+	width:calc(100% - 38.3em );
+	padding:1pt;
+	
+}
+#connections label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 4px 11px;
+  cursor: pointer;
+	margin:1pt;
+}
+#connections label.selected{
+  background-color: #7cf;
+}
+input[type="radio"] {
+  display: none;
+}
+@media screen and (max-width: 1050px) {
+
+	#chat{
+
+		height:calc( 100% - 13.2em );
+
+	}
+	#controles{
+		width:calc(100% - 17.5em );
+	
+}
+}
+
+

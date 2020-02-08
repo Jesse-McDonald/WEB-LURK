@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+    <title id="title">Lurk</title>
+
+    <link rel="stylesheet" href="http://isoptera.lcsc.edu/~jamcdonald/lurk/page/normalize.css">
+    <link rel="stylesheet" href="http://isoptera.lcsc.edu/~jamcdonald/lurk/page/main.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+    <div id="connection">To connect to a server please add "/?ip=serverIp&port=serverPort" or "/?port=serverport" (for local servers) to the url </div>
+    <div id="waiting" style="display: none;">
+        Waiting for server to send game, if you do not get a connection soon please verify your servers ip and port
+    </div>
+    <div id="join" style="display: none;">
+        <div id="game-desc"></div>
+        <form action="">
+<div class="left">
+            <input name="name" placeholder="Character Name" required type="text" maxlength="32" /></br>
+            <textarea name="description" wrap="soft" maxlength="65535" placeholder="Character Description"></textarea></br>
+            
+           </div>
+	<div class="right">
+	<div name="stat_max">0</div>
+            <label class="stat">Strength: <input name="str" min="0" max="100" value=0 type="number"/></label></br>
+            <label class="stat">Defence: <input class="stat" name="def" min="0" max="100" value=0 type="number"/></label></br>
+            <label class="stat">Regen: <input class="stat" name="reg" min="0" max="100" value=0 type="number"/></label></br>
+<label class="left">Join Battles: <input name="battle" checked type="checkbox" /></label><button type="submit">Send</button>
+	</div>
+            
+        </form>
+</div>
+    <div id="game" style="display: none;">
+        <div id="chat">
+            <ul id="messages"></ul>
+            <form action="">
+                <select name="target">
+                    <option value="">All</option>
+                </select>
+                <input name="input" type="text" maxlength="65535" required autocomplete="off" />
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+        <div id="room-title">&nbsp;</div>
+        <div id="room-description"><button name='start'>Press to Start</button></div>
+
+        
+		
+		<div id="controles" class="left">
+		<form id="connections"></form>
+        <div id="character">
+            <div name="name"></div>
+            <div name="description"></div>
+            <div class="attr" name="battle">Join Battle: <input type="checkbox" /> </div>
+            <div class="attr" name="health">Health: <div></div>
+            </div>
+            <div class="attr" name="gold">Gold: <div></div>
+            </div>
+            <div class="room" name="room" hidden>Curent Room <div></div>
+            </div>
+            <div class="stat" name="str">Str: <div></div>
+            </div>
+            <div class="stat" name="def">Def: <div></div>
+            </div>
+            <div class="stat" name="reg">Reg: <div></div>
+            </div>
+            <div class="attr" name="monster" hidden>Monster: <input type="checkbox" disabled /> </div>
+            <div class="attr" name="alive" hidden>Alive: <input type="checkbox" disabled /> </div>
+            <div class="attr" name="ready" hidden>ready: <input type="checkbox" disabled /> </div>
+            <div class="attr" name="started" hidden>started: <input type="checkbox" disabled /> </div>
+        </div>
+		<div class="mid">
+			<div >Players: <select id="players"></select></div>
+			<div >Monsters: <select id="monsters"></select></div>
+			<div >Lootables: <select id="loot"></select></div>
+			
+			<button id="fight">Fight</button>
+        </div>
+        </div>
+		<div id="inspect">
+            <div name="player" style="display: none;">
+                <div name="name">
+                    <div></div>
+                </div>
+                <div name="description">
+                    <div></div>
+                </div>
+                <div class="attr" name="battle">Join Battle: <input type="checkbox" disabled /> </div>
+                <div class="attr" name="monster" hidden>Monster: <input type="checkbox" disabled /> </div>
+                <div class="attr" name="alive" hidden>Alive: <input type="checkbox" disabled /> </div>
+                <div class="attr" name="ready" hidden>ready: <input type="checkbox" disabled /> </div>
+                <div class="attr" name="started" hidden>started: <input type="checkbox" disabled /> </div>
+                <div class="attr" name="health">Health: <div></div>
+                </div>
+                <div class="attr" name="gold">Gold: <div></div>
+                </div>
+                <div class="room" name="room" hidden>Curent Room <div></div>
+                </div>
+                <div class="stat" name="str">Str: <div></div>
+                </div>
+                <div class="stat" name="def">Def: <div></div>
+                </div>
+                <div class="stat" name="reg">Reg: <div></div>
+                </div>
+                <button></button>
+            </div>
+            <div name="room" style="display: none;">
+				<div name="number">
+                    <div></div>
+                </div>               
+			   <div name="name">
+                    <div></div>
+                </div>
+                
+                <div name="description">
+                    <div></div>
+                </div>
+                <button id="changeRoom">Move to Room</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://isoptera.lcsc.edu/~jamcdonald/lurk/page/purify.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://isoptera.lcsc.edu/~jamcdonald/lurk/page/lurk.js"></script>
+</body>
+
+</html>
