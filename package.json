@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Web interface for LURK protocal",
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "socket.io": "^4.5.3"
   },
   "scripts": {
